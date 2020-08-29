@@ -2,21 +2,7 @@
   (:require [clojure.string :as str])
   )
 
-(defn transform [acc x]
-
-  (let [letterAsSymbol (symbol x)]
-    (if (empty? acc)
-    (conj acc {letterAsSymbol 1})
-    (let [previousCharMap (last acc)
-          previousCharSymbol (first (keys previousCharMap))
-          sameChar? (= previousCharSymbol letterAsSymbol)]
-      (if sameChar?
-        (update (last acc) letterAsSymbol + 1)
-        (conj acc {letterAsSymbol 1}))))))
-
-
-
-(defn trans [elem]
+(defn transform [elem]
   (let [occurences (count elem)
         firstElem (first elem)
         back-to-str (fn [x] (apply str x))]
@@ -28,13 +14,7 @@
 (defn  run-length-encode
   "decodes a run-length-encoded string"
   [plain-text]
-  (apply str (map trans (partition-by identity plain-text))))
-
-
-
-
-
-
+  (apply str (map transform (partition-by identity plain-text))))
 
 
 (defn find-first-integer [cipher]
@@ -43,26 +23,20 @@
 (defn split-at-first-int [cipher]
   (clojure.string/split cipher #"\d+" 2))
 
-(defn first-char-after-int [cipher-split-at-int]
-  (first (nth cipher-split-at-int 1)))
-
 (defn multiply-first-char [char int]
   (apply str (take int (repeat char))))
 
 
-(defn decode [cipher]
-    (let [[head tail] (split-at-first-int cipher)]
-    (if (= tail nil)
-      cipher
-      (let [first-int (find-first-integer cipher)
-            multiplied-char (first tail)
-            remaining (apply str (rest tail))]
-        (apply str head (multiply-first-char multiplied-char first-int )(decode remaining))))))
-
-
 (defn run-length-decode
   "encodes a string with run-length-encoding"
-  [cipher-text]
-  (decode cipher-text))
+  [cipher]
+    (let [[head tail] (split-at-first-int cipher)]
+      (if (= tail nil)
+        cipher
+        (let [first-int (find-first-integer cipher)
+              multiplied-char (first tail)
+              remaining (apply str (rest tail))]
+          (apply str head (multiply-first-char multiplied-char first-int) (run-length-decode remaining))))))
+
 
 
