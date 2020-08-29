@@ -57,7 +57,7 @@
       (let [first-int (find-first-integer cipher)
             multiplied-char (first tail)
             remaining (apply str (rest tail))]
-        (apply str head (multiply-first-char multiplied-char first-int )(if (empty? remaining) "" (decode remaining)))))))
+        (apply str head (multiply-first-char multiplied-char first-int )(decode remaining))))))
 
 
 (defn run-length-decode
