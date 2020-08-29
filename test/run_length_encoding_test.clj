@@ -28,30 +28,30 @@
   (testing "encode string with lowercase characters"
     (is (= (rle/run-length-encode "aabbbcccc") "2a3b4c"))))
 
-;(deftest decode-empty-string
-;  (testing "decode empty string"
-;    (is (= (rle/run-length-decode "") ""))))
-;
-;(deftest decode-single-characters
-;  (testing "decode string with single characters only"
-;    (is (= (rle/run-length-decode "XYZ") "XYZ"))))
-;
-;(deftest decode-no-single-characters
-;  (testing "decode string with no single characters"
-;    (is (= (rle/run-length-decode "2A3B4C") "AABBBCCCC"))))
-;
-;(deftest decode-single-and-repeated-characters
-;  (testing "decode string with single and repeated characters"
-;    (is (= (rle/run-length-decode "12WB12W3B24WB") "WWWWWWWWWWWWBWWWWWWWWWWWWBBBWWWWWWWWWWWWWWWWWWWWWWWWB"))))
-;
-;(deftest decode-lowercase
-;  (testing "decode string with lowercase characters"
-;    (is (= (rle/run-length-decode "2a3b4c") "aabbbcccc"))))
-;
-;(deftest decode-mixed-whitespace
-;  (testing "decode string with mixed whitespace characters in it"
-;    (is (= (rle/run-length-decode "2 hs2q q2w2 ") "  hsqq qww  "))))
-;
-;(deftest consistency
-;  (testing "Encode a string and then decode it. Should return the same one."
-;    (is (= (rle/run-length-decode (rle/run-length-encode "zzz ZZ  zZ")) "zzz ZZ  zZ"))))
+(deftest decode-empty-string
+  (testing "decode empty string"
+    (is (= (rle/run-length-decode "") ""))))
+
+(deftest decode-single-characters
+  (testing "decode string with single characters only"
+    (is (= (rle/run-length-decode "XYZ") "XYZ"))))
+
+(deftest decode-no-single-characters
+  (testing "decode string with no single characters"
+    (is (= (rle/run-length-decode "2A3B4C") "AABBBCCCC"))))
+
+(deftest decode-single-and-repeated-characters
+ (testing "decode string with single and repeated characters"
+   (is (= (rle/run-length-decode "12WB12W3B24WB") "WWWWWWWWWWWWBWWWWWWWWWWWWBBBWWWWWWWWWWWWWWWWWWWWWWWWB"))))
+
+(deftest decode-lowercase 
+ (testing "decode string with lowercase characters"
+   (is (= (rle/run-length-decode "2a3b4c") "aabbbcccc"))))
+
+(deftest decode-mixed-whitespace
+ (testing "decode string with mixed whitespace characters in it"
+   (is (= (rle/run-length-decode "2 hs2q q2w2 ") "  hsqq qww  "))))
+
+(deftest consistency
+ (testing "Encode a string and then decode it. Should return the same one."
+   (is (= (rle/run-length-decode (rle/run-length-encode "zzz ZZ  zZ")) "zzz ZZ  zZ"))))

@@ -1,0 +1,182 @@
+; This is the Calva evaluation results output window.
+; Leave it open, please. Because quirks.
+; TIPS: The keyboard shortcut `ctrl+alt+c o` shows and focuses this window
+;   when connected to a REPL session.
+; Please see https://calva.io/output/ for more info.
+; Happy coding! ♥️
+
+; Jacking in...
+; nREPL Connection was closed
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS: 
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - File URLs in stacktrace frames are peekable and clickable.
+clj::user=> 
+; Jack-in done.
+; Evaluating file: run_length_encoding.clj
+#'run-length-encoding/run-length-decode
+clj::run-length-encoding=> (decode2 "a3f")
+                           
+"afff"
+clj::run-length-encoding=> 
+(decode2 "af")
+                           
+"af"
+clj::run-length-encoding=> 
+; Syntax error compiling at (run_length_encoding.clj:1:7962).
+; Unable to resolve symbol: there-is-integer-in-cipher? in this context
+[{:file "Compiler.java" :line 6808 :method "analyze" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 6745 :method "analyze" :flags [:dup :tooling :java]}
+ {:file "Compiler.java" :line 7180 :method "eval" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 7131 :method "eval" :flags [:dup :tooling :java]}
+ {:file "jar:file:/Users/agatasumowska/.m2/repository/org/clojure/clojure/1.10.0/clojure-1.10.0.jar!/clojure/core.clj:3214" :fn "eval"  :method "invokeStatic" :flags [:clj]}
+ {:file "jar:file:/Users/agatasumowska/.m2/repository/org/clojure/clojure/1.10.0/clojure-1.10.0.jar!/clojure/core.clj:3210" :fn "eval"  :method "invoke" :flags [:clj]}
+ {:file "jar:file:/Users/agatasumowska/.m2/repository/nrepl/nrepl/0.7.0/nrepl-0.7.0.jar!/nrepl/middleware/interruptible_eval.clj:91" :fn "evaluate/fn"  :method "invoke" :flags [:tooling :clj]}
+ {:file "jar:file:/Users/agatasumowska/.m2/repository/org/clojure/clojure/1.10.0/clojure-1.10.0.jar!/clojure/main.clj:414" :fn "repl/read-eval-print/fn"  :method "invoke" :flags [:clj]}
+ {:file "jar:file:/Users/agatasumowska/.m2/repository/org/clojure/clojure/1.10.0/clojure-1.10.0.jar!/clojure/main.clj:414" :fn "repl/read-eval-print"  :method "invoke" :flags [:dup :clj]}
+ {:file "jar:file:/Users/agatasumowska/.m2/repository/org/clojure/clojure/1.10.0/clojure-1.10.0.jar!/clojure/main.clj:435" :fn "repl/fn"  :method "invoke" :flags [:clj]}
+ {:file "jar:file:/Users/agatasumowska/.m2/repository/org/clojure/clojure/1.10.0/clojure-1.10.0.jar!/clojure/main.clj:435" :fn "repl"  :method "invokeStatic" :flags [:dup :clj]}
+ {:file "jar:file:/Users/agatasumowska/.m2/repository/org/clojure/clojure/1.10.0/clojure-1.10.0.jar!/clojure/main.clj:345" :fn "repl"  :method "doInvoke" :flags [:clj]}
+ {:file "RestFn.java" :line 1523 :method "invoke" :flags [:java]}
+ {:file "jar:file:/Users/agatasumowska/.m2/repository/nrepl/nrepl/0.7.0/nrepl-0.7.0.jar!/nrepl/middleware/interruptible_eval.clj:84" :fn "evaluate"  :method "invokeStatic" :flags [:tooling :clj]}
+ {:file "jar:file:/Users/agatasumowska/.m2/repository/nrepl/nrepl/0.7.0/nrepl-0.7.0.jar!/nrepl/middleware/interruptible_eval.clj:56" :fn "evaluate"  :method "invoke" :flags [:tooling :clj]}
+ {:file "jar:file:/Users/agatasumowska/.m2/repository/nrepl/nrepl/0.7.0/nrepl-0.7.0.jar!/nrepl/middleware/interruptible_eval.clj:155" :fn "interruptible-eval/fn/fn"  :method "invoke" :flags [:tooling :clj]}
+ {:file "AFn.java" :line 22 :method "run" :flags [:java]}
+ {:file "jar:file:/Users/agatasumowska/.m2/repository/nrepl/nrepl/0.7.0/nrepl-0.7.0.jar!/nrepl/middleware/session.clj:190" :fn "session-exec/main-loop/fn"  :method "invoke" :flags [:tooling :clj]}
+ {:file "jar:file:/Users/agatasumowska/.m2/repository/nrepl/nrepl/0.7.0/nrepl-0.7.0.jar!/nrepl/middleware/session.clj:189" :fn "session-exec/main-loop"  :method "invoke" :flags [:tooling :clj]}
+ {:file "AFn.java" :line 22 :method "run" :flags [:java]}
+ {:file "Thread.java" :line 834 :method "run" :flags [:java]}]
+clj::run-length-encoding=> 
+; Syntax error (UnsupportedOperationException) compiling recur at (run_length_encoding.clj:82:67).
+; Can only recur from tail position
+[{:file "Compiler.java" :line 7114 :method "analyzeSeq" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 6789 :method "analyze" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 6745 :method "analyze" :flags [:dup :tooling :java]}
+ {:file "Compiler.java" :line 3888 :method "parse" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 7108 :method "analyzeSeq" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 6789 :method "analyze" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 6745 :method "analyze" :flags [:dup :tooling :java]}
+ {:file "Compiler.java" :line 6120 :method "parse" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 6436 :method "parse" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 7106 :method "analyzeSeq" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 6789 :method "analyze" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 7094 :method "analyzeSeq" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 6789 :method "analyze" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 6745 :method "analyze" :flags [:dup :tooling :java]}
+ {:file "Compiler.java" :line 2837 :method "parse" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 7106 :method "analyzeSeq" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 6789 :method "analyze" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 6745 :method "analyze" :flags [:dup :tooling :java]}
+ {:file "Compiler.java" :line 6120 :method "parse" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 6436 :method "parse" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 7106 :method "analyzeSeq" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 6789 :method "analyze" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 7094 :method "analyzeSeq" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 6789 :method "analyze" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 6745 :method "analyze" :flags [:dup :tooling :java]}
+ {:file "Compiler.java" :line 6120 :method "parse" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 6436 :method "parse" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 7106 :method "analyzeSeq" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 6789 :method "analyze" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 7094 :method "analyzeSeq" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 6789 :method "analyze" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 6745 :method "analyze" :flags [:dup :tooling :java]}
+ {:file "Compiler.java" :line 6120 :method "parse" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 5467 :method "parse" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 4029 :method "parse" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 7104 :method "analyzeSeq" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 6789 :method "analyze" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 7094 :method "analyzeSeq" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 6789 :method "analyze" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 38 :method "access$300" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 596 :method "parse" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 7106 :method "analyzeSeq" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 6789 :method "analyze" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 6745 :method "analyze" :flags [:dup :tooling :java]}
+ {:file "Compiler.java" :line 7180 :method "eval" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 7131 :method "eval" :flags [:dup :tooling :java]}
+ {:file "jar:file:/Users/agatasumowska/.m2/repository/org/clojure/clojure/1.10.0/clojure-1.10.0.jar!/clojure/core.clj:3214" :fn "eval"  :method "invokeStatic" :flags [:clj]}
+ {:file "jar:file:/Users/agatasumowska/.m2/repository/org/clojure/clojure/1.10.0/clojure-1.10.0.jar!/clojure/core.clj:3210" :fn "eval"  :method "invoke" :flags [:clj]}
+ {:file "jar:file:/Users/agatasumowska/.m2/repository/nrepl/nrepl/0.7.0/nrepl-0.7.0.jar!/nrepl/middleware/interruptible_eval.clj:91" :fn "evaluate/fn"  :method "invoke" :flags [:tooling :clj]}
+ {:file "jar:file:/Users/agatasumowska/.m2/repository/org/clojure/clojure/1.10.0/clojure-1.10.0.jar!/clojure/main.clj:414" :fn "repl/read-eval-print/fn"  :method "invoke" :flags [:clj]}
+ {:file "jar:file:/Users/agatasumowska/.m2/repository/org/clojure/clojure/1.10.0/clojure-1.10.0.jar!/clojure/main.clj:414" :fn "repl/read-eval-print"  :method "invoke" :flags [:dup :clj]}
+ {:file "jar:file:/Users/agatasumowska/.m2/repository/org/clojure/clojure/1.10.0/clojure-1.10.0.jar!/clojure/main.clj:435" :fn "repl/fn"  :method "invoke" :flags [:clj]}
+ {:file "jar:file:/Users/agatasumowska/.m2/repository/org/clojure/clojure/1.10.0/clojure-1.10.0.jar!/clojure/main.clj:435" :fn "repl"  :method "invokeStatic" :flags [:dup :clj]}
+ {:file "jar:file:/Users/agatasumowska/.m2/repository/org/clojure/clojure/1.10.0/clojure-1.10.0.jar!/clojure/main.clj:345" :fn "repl"  :method "doInvoke" :flags [:clj]}
+ {:file "RestFn.java" :line 1523 :method "invoke" :flags [:java]}
+ {:file "jar:file:/Users/agatasumowska/.m2/repository/nrepl/nrepl/0.7.0/nrepl-0.7.0.jar!/nrepl/middleware/interruptible_eval.clj:84" :fn "evaluate"  :method "invokeStatic" :flags [:tooling :clj]}
+ {:file "jar:file:/Users/agatasumowska/.m2/repository/nrepl/nrepl/0.7.0/nrepl-0.7.0.jar!/nrepl/middleware/interruptible_eval.clj:56" :fn "evaluate"  :method "invoke" :flags [:tooling :clj]}
+ {:file "jar:file:/Users/agatasumowska/.m2/repository/nrepl/nrepl/0.7.0/nrepl-0.7.0.jar!/nrepl/middleware/interruptible_eval.clj:155" :fn "interruptible-eval/fn/fn"  :method "invoke" :flags [:tooling :clj]}
+ {:file "AFn.java" :line 22 :method "run" :flags [:java]}
+ {:file "jar:file:/Users/agatasumowska/.m2/repository/nrepl/nrepl/0.7.0/nrepl-0.7.0.jar!/nrepl/middleware/session.clj:190" :fn "session-exec/main-loop/fn"  :method "invoke" :flags [:tooling :clj]}
+ {:file "jar:file:/Users/agatasumowska/.m2/repository/nrepl/nrepl/0.7.0/nrepl-0.7.0.jar!/nrepl/middleware/session.clj:189" :fn "session-exec/main-loop"  :method "invoke" :flags [:tooling :clj]}
+ {:file "AFn.java" :line 22 :method "run" :flags [:java]}
+ {:file "Thread.java" :line 834 :method "run" :flags [:java]}]
+clj::run-length-encoding=> 
+; Syntax error compiling at (run_length_encoding.clj:1:7962).
+; Unable to resolve symbol: multiplied-char in this context
+[{:file "Compiler.java" :line 6808 :method "analyze" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 6745 :method "analyze" :flags [:dup :tooling :java]}
+ {:file "Compiler.java" :line 7180 :method "eval" :flags [:tooling :java]}
+ {:file "Compiler.java" :line 7131 :method "eval" :flags [:dup :tooling :java]}
+ {:file "jar:file:/Users/agatasumowska/.m2/repository/org/clojure/clojure/1.10.0/clojure-1.10.0.jar!/clojure/core.clj:3214" :fn "eval"  :method "invokeStatic" :flags [:clj]}
+ {:file "jar:file:/Users/agatasumowska/.m2/repository/org/clojure/clojure/1.10.0/clojure-1.10.0.jar!/clojure/core.clj:3210" :fn "eval"  :method "invoke" :flags [:clj]}
+ {:file "jar:file:/Users/agatasumowska/.m2/repository/nrepl/nrepl/0.7.0/nrepl-0.7.0.jar!/nrepl/middleware/interruptible_eval.clj:91" :fn "evaluate/fn"  :method "invoke" :flags [:tooling :clj]}
+ {:file "jar:file:/Users/agatasumowska/.m2/repository/org/clojure/clojure/1.10.0/clojure-1.10.0.jar!/clojure/main.clj:414" :fn "repl/read-eval-print/fn"  :method "invoke" :flags [:clj]}
+ {:file "jar:file:/Users/agatasumowska/.m2/repository/org/clojure/clojure/1.10.0/clojure-1.10.0.jar!/clojure/main.clj:414" :fn "repl/read-eval-print"  :method "invoke" :flags [:dup :clj]}
+ {:file "jar:file:/Users/agatasumowska/.m2/repository/org/clojure/clojure/1.10.0/clojure-1.10.0.jar!/clojure/main.clj:435" :fn "repl/fn"  :method "invoke" :flags [:clj]}
+ {:file "jar:file:/Users/agatasumowska/.m2/repository/org/clojure/clojure/1.10.0/clojure-1.10.0.jar!/clojure/main.clj:435" :fn "repl"  :method "invokeStatic" :flags [:dup :clj]}
+ {:file "jar:file:/Users/agatasumowska/.m2/repository/org/clojure/clojure/1.10.0/clojure-1.10.0.jar!/clojure/main.clj:345" :fn "repl"  :method "doInvoke" :flags [:clj]}
+ {:file "RestFn.java" :line 1523 :method "invoke" :flags [:java]}
+ {:file "jar:file:/Users/agatasumowska/.m2/repository/nrepl/nrepl/0.7.0/nrepl-0.7.0.jar!/nrepl/middleware/interruptible_eval.clj:84" :fn "evaluate"  :method "invokeStatic" :flags [:tooling :clj]}
+ {:file "jar:file:/Users/agatasumowska/.m2/repository/nrepl/nrepl/0.7.0/nrepl-0.7.0.jar!/nrepl/middleware/interruptible_eval.clj:56" :fn "evaluate"  :method "invoke" :flags [:tooling :clj]}
+ {:file "jar:file:/Users/agatasumowska/.m2/repository/nrepl/nrepl/0.7.0/nrepl-0.7.0.jar!/nrepl/middleware/interruptible_eval.clj:155" :fn "interruptible-eval/fn/fn"  :method "invoke" :flags [:tooling :clj]}
+ {:file "AFn.java" :line 22 :method "run" :flags [:java]}
+ {:file "jar:file:/Users/agatasumowska/.m2/repository/nrepl/nrepl/0.7.0/nrepl-0.7.0.jar!/nrepl/middleware/session.clj:190" :fn "session-exec/main-loop/fn"  :method "invoke" :flags [:tooling :clj]}
+ {:file "jar:file:/Users/agatasumowska/.m2/repository/nrepl/nrepl/0.7.0/nrepl-0.7.0.jar!/nrepl/middleware/session.clj:189" :fn "session-exec/main-loop"  :method "invoke" :flags [:tooling :clj]}
+ {:file "AFn.java" :line 22 :method "run" :flags [:java]}
+ {:file "Thread.java" :line 834 :method "run" :flags [:java]}]
+clj::run-length-encoding=> 
+; Evaluating file: run_length_encoding.clj
+; Syntax error (UnsupportedOperationException) compiling recur at (run_length_encoding.clj:91:91).
+; Can only recur from tail position
+; Evaluation of file run_length_encoding.clj failed: class clojure.lang.Compiler$CompilerException
+#'run-length-encoding/decode
+clj::run-length-encoding=> (decode "ds")
+
+"ds"
+clj::run-length-encoding=>  (decode "d3s")
+"dclojure.lang.LazySeq@23272"
+clj::run-length-encoding=> (if "" "yes" "nio")
+
+"yes"
+clj::run-length-encoding=> 
+(if (empty? "") "yes" "nio")
+"yes"
+clj::run-length-encoding=> 
+(if (empty? "s") "yes" "nio")
+"nio"
+clj::run-length-encoding=> 
+; Evaluating file: run_length_encoding.clj
+#'run-length-encoding/run-length-decode
+clj::run-length-encoding=> 
+#'run-length-encoding/decode
+clj::run-length-encoding=> (decode "df")
+                           
+"df"
+clj::run-length-encoding=> (decode "d3f")
+"dclojure.lang.LazySeq@20005"
+clj::run-length-encoding=> 
+#'run-length-encoding/decode
+clj::run-length-encoding=> 
+(decode "d3f")
+"dfff"
+clj::run-length-encoding=> 
+(decode "d3f4s")
+"dfffssss"
+clj::run-length-encoding=> 
