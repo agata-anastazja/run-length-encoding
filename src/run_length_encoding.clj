@@ -47,7 +47,7 @@
   (first (nth cipher-split-at-int 1)))
 
 (defn multiply-first-char [char int]
-  (take int (repeat char)))
+  (apply str (take int (repeat char))))
 
 
 (defn decode [cipher]
@@ -57,7 +57,7 @@
       (let [first-int (find-first-integer cipher)
             multiplied-char (first tail)
             remaining (apply str (rest tail))]
-        (apply str head (apply str (take first-int (repeat multiplied-char)))(if (empty? remaining) "" (decode remaining)))))))
+        (apply str head (multiply-first-char multiplied-char first-int )(if (empty? remaining) "" (decode remaining)))))))
 
 
 (defn run-length-decode
