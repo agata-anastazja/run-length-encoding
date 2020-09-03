@@ -8,7 +8,7 @@
   (->>
     (partition-by identity plain-text)
     (mapcat (juxt count first))
-    (remove #(= %1 \1))
+    (remove #{1})
     (apply str)))
 
 
@@ -20,13 +20,8 @@
   (->>
     cipher
     (re-seq #"(\d+)?(\D)")
-    (mapcat (fn [x]
-              (let [repetitions (nth x 1)
-                    char (nth x 2)]
-                (if repetitions
-                  (repeat (Integer/parseInt repetitions) char )
-                  char)
-                   )))
+    (mapcat #(let [[_ repetitions char] %1]
+                (repeat (Integer/parseInt (or repetitions "1")) char)))
     (apply str)))
 
 
